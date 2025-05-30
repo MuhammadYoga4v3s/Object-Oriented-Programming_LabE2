@@ -1,0 +1,5 @@
+com\mycompany\persistentoop1_db\DAOManager.class
+com\mycompany\persistentoop1_db\Person.class
+com\mycompany\persistentoop1_db\MainDAO.class
+com\mycompany\persistentoop1_db\MySQLPersonDAO.class
+com\mycompany\persistentoop1_db\PersonDAO.class
