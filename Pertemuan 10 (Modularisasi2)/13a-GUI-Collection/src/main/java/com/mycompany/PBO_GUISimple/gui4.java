@@ -8,10 +8,6 @@ import java.util.ArrayList;
 import java.util.*;
 import javax.swing.DefaultListModel;
 
-/**
- *
- * @author bruhismyname/Rajwaa
- */
 
 public class gui4 extends javax.swing.JFrame {
     DefaultListModel<String> dlm;
