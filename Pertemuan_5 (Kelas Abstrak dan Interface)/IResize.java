@@ -1,42 +1,46 @@
 /*  Nama File   : IResize.java
  *  Deskripsi   : Interface mendefinisikan method zoomIn(), zoomOut(), dan zoom()
- *  Pembuat     : Rajwaa Muflihul Aufaa
- *  NIM         : 24060123140189
- *  Tanggal     : 20 Maret 2025
+ *  Pembuat     : Muhammad Yoga Aminudin
+ *  NIM         : 24060123130106
+ *  Tanggal     : 22 Juni 2025
  */
 
 public interface IResize {
-  void zoomIn();
+    // Method untuk memperbesar ukuran objek
+    void zoomIn();
 
-  void zoomOut();
+    // Method untuk memperkecil ukuran objek
+    void zoomOut();
 
-  void zoom(double percent);
+    // Method untuk mengatur ukuran objek berdasarkan persentase
+    void zoom(double percent);
 }
 
 /*
-Apakah keuntungan saat method zoomIn(), zoomOut(), dan zoom() dikemas dalam interface IResize dibanding dijadikan sebagai abstract method dalam classBangunDatar?
+Apakah keuntungan saat method zoomIn(), zoomOut(), dan zoom() dikemas dalam interface IResize dibanding dijadikan sebagai abstract method dalam class BangunDatar?
 
 Jawab:
 
-Manfaat Penggunaan Interface dalam Pemrograman Java
+Manfaat Penggunaan Interface dalam Pemrograman Java:
 
-- Dukungan Multiple Inheritance
-Java memiliki keterbatasan dimana sebuah kelas hanya dapat mewarisi dari satu kelas induk (single inheritance). Namun, Java memberikan solusi dengan memungkinkan implementasi beberapa interface sekaligus. Jika kita menempatkan metode resize sebagai metode abstrak di kelas BangunDatar, maka kelas-kelas yang bukan turunan BangunDatar tidak akan bisa memiliki kemampuan resize tersebut.
+1. Dukungan Multiple Inheritance  
+   Java tidak mendukung pewarisan ganda antar kelas, tetapi memungkinkan sebuah kelas mengimplementasikan beberapa interface. Jika metode resize diletakkan di BangunDatar, maka kelas non-BangunDatar tidak bisa memilikinya.
 
-- Prinsip Pemisahan Tanggung Jawab
-Dengan menggunakan interface terpisah untuk kemampuan resize, kita menerapkan prinsip pemisahan tanggung jawab dengan baik. Tidak semua bangun datar perlu memiliki kemampuan untuk diubah ukurannya, sehingga lebih masuk akal untuk menempatkan fungsionalitas ini pada interface khusus daripada memaksakannya pada seluruh hierarki BangunDatar.
+2. Prinsip Pemisahan Tanggung Jawab  
+   Tidak semua bangun datar perlu bisa di-resize. Menempatkan resize dalam interface terpisah mengikuti prinsip ini dengan lebih baik.
 
-- Peningkatan Kemampuan Penggunaan Ulang
-Interface seperti IResize dapat dimanfaatkan oleh berbagai kelas yang tidak memiliki hubungan pewarisan dengan BangunDatar. Misalnya, kelas seperti Garis, bangun tiga dimensi (Kubus, Bola), atau bahkan komponen antarmuka pengguna seperti Window dan Image juga dapat mengimplementasikan kemampuan resize.
+3. Peningkatan Kemampuan Penggunaan Ulang  
+   Interface IResize bisa digunakan oleh kelas lain seperti Garis, Kubus, Bola, atau bahkan Window dan Image, tanpa tergantung pada pewarisan BangunDatar.
 
-- Pemrograman Berbasis Kontrak
-Interface menetapkan kesepakatan yang jelas tentang kemampuan yang harus disediakan oleh kelas yang mengimplementasikannya, tanpa mengharuskan kelas tersebut mewarisi dari kelas tertentu. Pendekatan ini memungkinkan berbagai kelas dari hierarki yang berbeda untuk memiliki kemampuan fungsional yang sama.
+4. Pemrograman Berbasis Kontrak  
+   Interface memberikan kontrak yang harus diikuti oleh semua kelas pengimplementasinya, tanpa harus ikut pewarisan hierarki tertentu.
 
-- Pengurangan Ketergantungan Antar Komponen
-Penggunaan interface menciptakan tingkat abstraksi yang mengurangi ketergantungan langsung antar komponen dalam sistem. Kode kita dapat berinteraksi dengan abstraksi interface daripada implementasi konkret, sehingga meningkatkan fleksibilitas dan kemudahan dalam pemeliharaan.
+5. Pengurangan Ketergantungan Antar Komponen  
+   Interaksi dilakukan terhadap interface, bukan implementasi spesifik. Hal ini membuat kode lebih fleksibel dan mudah dirawat.
 
-- Polimorfisme yang Lebih Luas
-Dengan interface, kita dapat membuat koleksi objek yang mengimplementasikan IResize dari berbagai jenis kelas yang berbeda, tidak terbatas pada kelas-kelas yang merupakan turunan dari BangunDatar. Hal ini memberikan fleksibilitas yang jauh lebih besar dalam pengelolaan objek.
+6. Polimorfisme yang Lebih Luas  
+   Koleksi objek yang mengimplementasikan IResize bisa terdiri dari berbagai kelas berbeda, tak terbatas hanya pada turunan BangunDatar.
 
-Melalui pendekatan menggunakan interface, kita dapat menerapkan prinsip "Program terhadap interface, bukan implementasi" yang merupakan praktik terbaik dalam paradigma pemrograman berorientasi objek. Pendekatan ini menghasilkan kode yang lebih adaptif dan mudah dikembangkan.
- */
+Kesimpulan:  
+Interface memberikan abstraksi yang kuat, fleksibilitas dalam desain, serta mendukung prinsip-prinsip OOP seperti low coupling dan high cohesion.
+*/
