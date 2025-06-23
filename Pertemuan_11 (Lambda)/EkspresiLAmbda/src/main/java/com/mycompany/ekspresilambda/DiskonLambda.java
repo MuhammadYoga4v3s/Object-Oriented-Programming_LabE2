@@ -1,9 +1,17 @@
+/* NamaFile  : DiskonLambda.java
+ * Deskripsi : Penggunaan Algoritma Lintas Paradigma : PBO X LAMbda
+ * Pembuat   : Muhammad Yoga Aminudin (24060123130106)
+ * Tanggal   : 20/05/2025
+ */
+
 package com.mycompany.ekspresilambda;
 
+// Interface untuk menghitung diskon
 interface IDiskon {
     public double hitungDiskon(int harga);
 }
 
+// Cotoh penggunaan Lambda
 public class DiskonLambda {
     public static void main(String[] args) {
         // Tanpa Lambda
