@@ -1,6 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+/* NamaFile  : gui4.java
+ * Deskripsi : APlikasi GUI Sederhana interaksi antara Jlist dengan List dengan Map dan hash
+ * Pembuat   : Muhammad Yoga Aminudin (24060123130106)
+ * Tanggal   : 20/05/2025
  */
 package com.mycompany.pbogui11a;
 
